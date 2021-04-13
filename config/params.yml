@@ -1,0 +1,6 @@
+base:
+   a1: 34
+
+
+data_source:
+  s3_source: given_data/winequality.csv
