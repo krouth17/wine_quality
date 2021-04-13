@@ -8,7 +8,7 @@ def load_and_save(config_path):
     df = get_data_value(config_path)
     cols = [cols.replace(" ","_") for cols in df.columns]
     raw_data_path = params['raw_data']['raw_data_path']
-    df.to_csv(raw_data_path,index=False,sep=",",header=raw_data_path)
+    df.to_csv(raw_data_path,index=False,sep=",",header=cols)
 
 
 if __name__=="__main__":
