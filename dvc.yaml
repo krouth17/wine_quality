@@ -1,0 +1,32 @@
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=config/params.yml
+    deps:
+    - src/get_data.py
+    - src/load_data.py
+    - given_data/winequality.csv
+    outs:
+    - data/raw/winequality.csv
+  split_data:
+    cmd: python src/split_data.py --config=config/params.yml
+    deps:
+    - src/get_data.py
+    - given_data/winequality.csv
+    outs:
+    - data/processed/test_winequality.csv
+    - data/processed/train_winequality.csv
+
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=config/params.yml
+    deps:
+    - data/processed/train_winequality.csv
+    - data/processed/test_winequality.csv 
+    - src/train_and_evaluate.py
+    metrics:
+    - reports/params.json:
+        cache: false
+    - reports/scores.json:
+        cache: false
+    outs:
+    - saved_models/model.joblib
+    

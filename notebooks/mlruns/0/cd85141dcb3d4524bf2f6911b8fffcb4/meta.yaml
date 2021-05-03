@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/d/DS_Learning/Wine_quality/wq/notebooks/mlruns/0/cd85141dcb3d4524bf2f6911b8fffcb4/artifacts
+end_time: 1619003011090
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: cd85141dcb3d4524bf2f6911b8fffcb4
+run_uuid: cd85141dcb3d4524bf2f6911b8fffcb4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1619003010792
+status: 3
+tags: []
+user_id: tiger0xxx
