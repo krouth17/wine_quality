@@ -56,6 +56,8 @@ def train_evaluate(config_path):
         }
         json.dump(scores,rb,indent=4)
 
+
+
     os.makedirs(model_store_dir,exist_ok=True)
     model_path = os.path.join(model_store_dir,"model.joblib")
     joblib.dump(lr,model_path)

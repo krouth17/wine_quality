@@ -27,4 +27,6 @@ stages:
         cache: false
     - reports/scores.json:
         cache: false
+    outs:
+    - saved_models/model.joblib
     
